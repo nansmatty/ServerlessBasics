@@ -10,6 +10,8 @@ provider:
     - Effect: Allow
       Action:
         - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-west-2:984836367324:table/TodoTable
 
 functions:
   addTodo:
