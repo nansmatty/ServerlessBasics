@@ -26,6 +26,18 @@ functions:
       - httpApi:
           path: /todos
           method: get
+  fetchTodo:
+    handler: source/fetchTodo.handler
+    events:
+      - httpApi:
+          path: /todo/{id}
+          method: get
+  updateTodo:
+    handler: source/updateTodo.handler
+    events:
+      - httpApi:
+          path: /todo/{id}
+          method: put
 
 resources:
   Resources:
