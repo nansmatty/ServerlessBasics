@@ -1,0 +1,16 @@
+service: aws-node-http-api-project
+frameworkVersion: '2 || 3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: '20201221'
+  region: us-west-2
+
+functions:
+  hello:
+    handler: source/hello.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
