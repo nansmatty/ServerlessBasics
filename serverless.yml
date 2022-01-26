@@ -19,6 +19,12 @@ functions:
     events:
       - httpApi:
           path: /
+          method: post
+  fetchTodos:
+    handler: source/fetchTodos.handler
+    events:
+      - httpApi:
+          path: /todos
           method: get
 
 resources:
